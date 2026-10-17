@@ -67,5 +67,9 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Spooky-2D-Jam-Repository.slnx"
+    "dotnet.defaultSolution": "Spooky-2D-Jam-Repository.slnx",
+    "csharp-dev-tools.solutionViewer.selectedWorkspaceSolutions": [
+        "Spooky Jam Game.slnx",
+        "Spooky-2D-Jam-Repository.slnx"
+    ]
 }

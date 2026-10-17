@@ -6,6 +6,8 @@ public class AudioMaster : MonoBehaviour
 
     public static AudioMaster AM;
     public int masterVolume = 5;
+    public int score;
+    public int highscore;
 
     [SerializeField] private AudioSource baseSong;
     [SerializeField] private AudioSource skeletonLayer;

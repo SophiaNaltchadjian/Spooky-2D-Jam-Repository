@@ -119,6 +119,96 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &81472296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 81472300}
+  - component: {fileID: 81472299}
+  - component: {fileID: 81472298}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &81472298
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81472296}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 310954eb93054954ebcf78b4c75e64c1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &81472299
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81472296}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &81472300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81472296}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalScale: {x: 25, y: 25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &187316735
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +245,7 @@ TextMesh:
   m_FontSize: 500
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 2e8ef79f3929336479dbf1f34bda6717, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
@@ -184,7 +274,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e8ef79f3929336479dbf1f34bda6717, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -253,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff444d3f4b1df91458f8b6d32a9c5b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteBPMFlipper
-  BPM: 62.5
+  BPM: 124
   mySprite: {fileID: 300851899}
 --- !u!212 &300851899
 SpriteRenderer:
@@ -360,7 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff444d3f4b1df91458f8b6d32a9c5b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteBPMFlipper
-  BPM: 62.5
+  BPM: 124
   mySprite: {fileID: 331748714}
 --- !u!212 &331748714
 SpriteRenderer:
@@ -467,7 +557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff444d3f4b1df91458f8b6d32a9c5b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteBPMFlipper
-  BPM: 125
+  BPM: 124
   mySprite: {fileID: 502903015}
 --- !u!212 &502903015
 SpriteRenderer:
@@ -581,7 +671,7 @@ TextMesh:
   m_FontSize: 500
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 2e8ef79f3929336479dbf1f34bda6717, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
@@ -610,7 +700,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e8ef79f3929336479dbf1f34bda6717, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -698,7 +788,7 @@ TextMesh:
   m_FontSize: 500
   m_FontStyle: 1
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 2e8ef79f3929336479dbf1f34bda6717, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4291611852
@@ -727,7 +817,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e8ef79f3929336479dbf1f34bda6717, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -761,7 +851,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.91, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.022999998, y: 0.022999998, z: 0.022999998}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -796,7 +886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff444d3f4b1df91458f8b6d32a9c5b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteBPMFlipper
-  BPM: 125
+  BPM: 124
   mySprite: {fileID: 669552868}
 --- !u!212 &669552868
 SpriteRenderer:
@@ -1040,7 +1130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff444d3f4b1df91458f8b6d32a9c5b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteBPMFlipper
-  BPM: 62.5
+  BPM: 124
   mySprite: {fileID: 847945189}
 --- !u!212 &847945189
 SpriteRenderer:
@@ -1176,7 +1266,7 @@ TextMesh:
   m_FontSize: 500
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 2e8ef79f3929336479dbf1f34bda6717, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
@@ -1205,7 +1295,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e8ef79f3929336479dbf1f34bda6717, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1310,7 +1400,7 @@ TextMesh:
   m_FontSize: 500
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 2e8ef79f3929336479dbf1f34bda6717, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
@@ -1339,7 +1429,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e8ef79f3929336479dbf1f34bda6717, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1382,8 +1472,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 155.6, y: 56.9, z: 0}
-  m_Center: {x: 212.1, y: 0, z: 0}
+  m_Size: {x: 142.7, y: 56.9, z: 0}
+  m_Center: {x: 168.2, y: 1.29, z: 0}
 --- !u!114 &1604325803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1426,7 +1516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff444d3f4b1df91458f8b6d32a9c5b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteBPMFlipper
-  BPM: 125
+  BPM: 124
   mySprite: {fileID: 1691006056}
 --- !u!212 &1691006056
 SpriteRenderer:
@@ -1562,7 +1652,7 @@ TextMesh:
   m_FontSize: 500
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 2e8ef79f3929336479dbf1f34bda6717, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
@@ -1591,7 +1681,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e8ef79f3929336479dbf1f34bda6717, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1673,7 +1763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff444d3f4b1df91458f8b6d32a9c5b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteBPMFlipper
-  BPM: 125
+  BPM: 124
   mySprite: {fileID: 1801075805}
 --- !u!212 &1801075805
 SpriteRenderer:
@@ -1780,7 +1870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff444d3f4b1df91458f8b6d32a9c5b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteBPMFlipper
-  BPM: 62.5
+  BPM: 124
   mySprite: {fileID: 1883593435}
 --- !u!212 &1883593435
 SpriteRenderer:
@@ -1934,3 +2024,4 @@ SceneRoots:
   - {fileID: 300851900}
   - {fileID: 502903016}
   - {fileID: 669552869}
+  - {fileID: 81472300}

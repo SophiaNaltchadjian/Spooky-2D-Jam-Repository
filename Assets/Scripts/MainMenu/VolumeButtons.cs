@@ -4,6 +4,7 @@ public class VolumeButtons : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
+    [SerializeField] private AudioSource clicksound;
     [SerializeField] private bool volumedown;
 
     void Start()
@@ -19,6 +20,7 @@ public class VolumeButtons : MonoBehaviour
 
     private void OnMouseDown()
     {
+        clicksound.Play();
         if (volumedown && AudioMaster.AM.masterVolume > 0)
         {
             Debug.Log("Volume Down");

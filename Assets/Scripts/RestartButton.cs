@@ -25,6 +25,7 @@ public class RestartButton : MonoBehaviour
 
     private void Restart()
     {
+        AudioMaster.AM.StartMusic();
         AudioMaster.AM.score = 0;
         Application.LoadLevel(0);
         Debug.Log("Restarting Game");

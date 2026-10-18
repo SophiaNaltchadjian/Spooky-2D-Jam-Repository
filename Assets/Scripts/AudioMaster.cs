@@ -10,11 +10,7 @@ public class AudioMaster : MonoBehaviour
     public int highscore;
 
     [SerializeField] private AudioSource baseSong;
-    [SerializeField] private AudioSource skeletonLayer;
-    [SerializeField] private AudioSource zombieLayer;
     [SerializeField] private AudioSource percussionLayer;
-    public bool randomizer = false;
-    private bool testsweep = false;
 
     void Start()
     {
@@ -27,13 +23,9 @@ public class AudioMaster : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        baseSong.volume = 0.95f;
-        skeletonLayer.volume = 0.01f;
-        zombieLayer.volume = 0.01f;
+        baseSong.volume = 0.9f;
         percussionLayer.volume = 0.01f;
         baseSong.gameObject.SetActive(true);
-        skeletonLayer.gameObject.SetActive(true);
-        zombieLayer.gameObject.SetActive(true);
         percussionLayer.gameObject.SetActive(true);
     }
 
@@ -41,30 +33,18 @@ public class AudioMaster : MonoBehaviour
     void FixedUpdate()
     {
         AudioListener.volume = masterVolume / 11.0f;
-        if (randomizer)
-        {
-            if (!testsweep)
-            {
-                if (zombieLayer.volume < 0.98f)
-                {
-                    zombieLayer.volume += 0.01f;
-                }
-                if (zombieLayer.volume > 0.97f)
-                {
-                    testsweep = true;
-                }
-            }
-            else
-            {
-                if (zombieLayer.volume > 0.02f)
-                {
-                    zombieLayer.volume -= 0.01f;
-                }
-                if (zombieLayer.volume < 0.03f)
-                {
-                    testsweep = false;
-                }
-            }
-        }
+        percussionLayer.volume = (score + 1) / 45.0f;
+    }
+
+    public void StopMusic()
+    {
+        baseSong.gameObject.SetActive(false);
+        percussionLayer.gameObject.SetActive(false);
+    }
+
+    public void StartMusic()
+    {
+        baseSong.gameObject.SetActive(true);
+        percussionLayer.gameObject.SetActive(true);
     }
 }

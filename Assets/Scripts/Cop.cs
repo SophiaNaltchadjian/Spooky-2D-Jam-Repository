@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Cop : MonoBehaviour
 {
+    [SerializeField] private GameObject fightCloud;
     public float speed;
     private Transform target;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,9 +24,11 @@ public class Cop : MonoBehaviour
             //maybe add health later
             Debug.Log("Cop got player, GAMEOVER!");
             Application.LoadLevel(2);
+            AudioMaster.AM.StopMusic();
         }
         if (collision.gameObject.CompareTag("Undead"))
         {
+            Instantiate(fightCloud, transform.position, transform.rotation);
             AudioMaster.AM.score += 1;
             Destroy(collision.gameObject);
             Destroy(gameObject);

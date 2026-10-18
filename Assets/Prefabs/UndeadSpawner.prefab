@@ -138,8 +138,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UndeadSpawner
   Undead:
-  - {fileID: 787261246307778306, guid: b07eef85cc64835449ceeac4fbeb1f4d, type: 3}
   - {fileID: 8053155213461977191, guid: 757da6b820437af9c946c4b790d1dd3a, type: 3}
+  - {fileID: 8053155213461977191, guid: 757da6b820437af9c946c4b790d1dd3a, type: 3}
+  - {fileID: 787261246307778306, guid: b07eef85cc64835449ceeac4fbeb1f4d, type: 3}
+  - {fileID: 2523180489708145991, guid: a9c7a09732330a94092a58068b161efa, type: 3}
   distanceToSpawn: 3
   refreshTime: 12
   mySprite: {fileID: 8858521636554176995}

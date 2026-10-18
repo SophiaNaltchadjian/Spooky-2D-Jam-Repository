@@ -3,10 +3,13 @@ using System.Collections;
 public class PoliceSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject copPrefab;
+    [SerializeField] private float spawnCopsAfterXTime;
+    [SerializeField] private float spawnCopseveryX;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(SpawnCops());
+        InvokeRepeating("SpawnCops",spawnCopsAfterXTime,spawnCopseveryX);
     }
 
     // Update is called once per frame
@@ -14,9 +17,8 @@ public class PoliceSpawner : MonoBehaviour
     {
         
     }
-    IEnumerator SpawnCops()
+    private void SpawnCops()
     {
-        yield return new WaitForSeconds(5f);
         Instantiate(copPrefab, transform.position, Quaternion.identity);
     }
 }

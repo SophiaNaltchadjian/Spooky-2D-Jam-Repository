@@ -36,8 +36,10 @@ public class Follower : MonoBehaviour
                 lastDirection = new Vector2(0, Mathf.Sign(movement.y));
             }
         }
-
-        animator.SetFloat("Horizontal", lastDirection.x);
-        animator.SetFloat("Vertical", lastDirection.y);
+        if (animator != null)
+        {
+            animator.SetFloat("Horizontal", lastDirection.x);
+            animator.SetFloat("Vertical", lastDirection.y);
+        }
     }
 }

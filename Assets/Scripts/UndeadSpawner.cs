@@ -7,6 +7,10 @@ public class UndeadSpawner : MonoBehaviour
     [SerializeField] private GameObject Undead;
     [SerializeField] private float distanceToSpawn;
     [SerializeField] private float refreshTime = 10;
+    [SerializeField] private SpriteRenderer mySprite;
+    [SerializeField] private Sprite coffin0;
+    [SerializeField] private Sprite coffin1;
+    [SerializeField] private Sprite coffin2;
     private float refreshTimer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,6 +29,21 @@ public class UndeadSpawner : MonoBehaviour
     void FixedUpdate()
     {
         refreshTimer -= Time.fixedDeltaTime;
+        if(refreshTimer < 0)
+        {
+            mySprite.sprite = coffin1;
+        }
+        else
+        {
+            if (refreshTimer < refreshTime - 1)
+            {
+                mySprite.sprite = coffin0;
+            }
+            else
+            {
+                mySprite.sprite = coffin2;
+            }
+        }
     }
 
     private void DistanceCheck()
@@ -34,7 +53,7 @@ public class UndeadSpawner : MonoBehaviour
             if (Vector2.Distance(playerLoc.position, transform.position) < distanceToSpawn)
             {
                 //spawnzombie
-                Instantiate(Undead, transform.position.normalized, transform.rotation);
+                Instantiate(Undead, transform.position, transform.rotation);
                 if (AudioMaster.AM != null)
                 {
                     AudioMaster.AM.score += 1;

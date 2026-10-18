@@ -27,8 +27,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.81, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 9083447751410332689}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -81,8 +81,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.3679245, g: 0.1500934, b: 0.06421324, a: 1}
+  m_Sprite: {fileID: -914800917313042466, guid: 9ebcd56c68570d1439d5c9748efa46b8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -137,6 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2164aee4ebd12469dbe5dd293c6b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UndeadSpawner
-  Undead: {fileID: 1513268272829861571, guid: 566cb680fd1d753489f5c7ab98c2b411, type: 3}
-  distanceToSpawn: 1
-  refreshTime: 10
+  Undead: {fileID: 787261246307778306, guid: b07eef85cc64835449ceeac4fbeb1f4d, type: 3}
+  distanceToSpawn: 3
+  refreshTime: 12
+  mySprite: {fileID: 8858521636554176995}
+  coffin0: {fileID: -914800917313042466, guid: 9ebcd56c68570d1439d5c9748efa46b8, type: 3}
+  coffin1: {fileID: -8333164380212996125, guid: 9ebcd56c68570d1439d5c9748efa46b8, type: 3}
+  coffin2: {fileID: 6377882047647768973, guid: 9ebcd56c68570d1439d5c9748efa46b8, type: 3}

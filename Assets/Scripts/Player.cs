@@ -4,13 +4,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed;
+    public AudioSource stepsAudioSource;
     private Transform tombstoneTransform;
     private bool isSummoning= false;
     [SerializeField] GameObject undeadPrefab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+     
     }
 
     // Update is called once per frame
@@ -22,6 +23,22 @@ public class Player : MonoBehaviour
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"),0f);
         transform.position += movement * speed * Time.deltaTime;
+        if (movement.magnitude > 0)
+        {
+            if(stepsAudioSource != null && !stepsAudioSource.isPlaying)
+            {
+                stepsAudioSource.Play();
+            }
+          
+         }
+          if (movement.magnitude == 0)
+        {
+            if(stepsAudioSource != null && stepsAudioSource.isPlaying)
+            {
+                stepsAudioSource.Stop();
+            }
+          
+         }
 
     }
     private void OnTriggerEnter2D(Collider2D other)

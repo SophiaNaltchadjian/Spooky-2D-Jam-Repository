@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192845ee9530ca7de9d9aa99e386ab5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Undead
-  speed: 2
+  speed: 1
 --- !u!61 &-3599388717033469276
 BoxCollider2D:
   m_ObjectHideFlags: 0

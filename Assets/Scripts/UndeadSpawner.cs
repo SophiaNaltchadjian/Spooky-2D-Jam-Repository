@@ -4,7 +4,7 @@ public class UndeadSpawner : MonoBehaviour
 {
 
     private Transform playerLoc;
-    [SerializeField] private GameObject Undead;
+    [SerializeField] private GameObject[] Undead;
     [SerializeField] private float distanceToSpawn;
     [SerializeField] private float refreshTime = 10;
     [SerializeField] private SpriteRenderer mySprite;
@@ -53,7 +53,7 @@ public class UndeadSpawner : MonoBehaviour
             if (Vector2.Distance(playerLoc.position, transform.position) < distanceToSpawn)
             {
                 //spawnzombie
-                Instantiate(Undead, transform.position, transform.rotation);
+                Instantiate(Undead[Random.Range(0, Undead.Length)], transform.position, transform.rotation);
                 if (AudioMaster.AM != null)
                 {
                     AudioMaster.AM.score += 1;

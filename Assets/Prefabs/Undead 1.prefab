@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 970972296251921268}
   - component: {fileID: 6420303041904257175}
   - component: {fileID: 8257666627619488223}
-  - component: {fileID: 7938945002481784232}
   - component: {fileID: 7487497519310397193}
   - component: {fileID: 3429339642062055991}
+  - component: {fileID: 8931957808745515366}
   m_Layer: 0
   m_Name: Undead 1
   m_TagString: Undead
@@ -124,19 +124,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7938945002481784232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787261246307778306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 192845ee9530ca7de9d9aa99e386ab5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Undead
-  speed: 0.8
 --- !u!61 &7487497519310397193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -196,6 +183,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LifeSpan
   destroyAfterXSeconds: 120
+--- !u!114 &8931957808745515366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787261246307778306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07dbcbb1404b7a881bfa94b725f08399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Follower
+  speed: 2.5
 --- !u!1 &5754074325182394138
 GameObject:
   m_ObjectHideFlags: 0

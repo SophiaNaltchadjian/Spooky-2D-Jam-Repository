@@ -137,7 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2164aee4ebd12469dbe5dd293c6b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UndeadSpawner
-  Undead: {fileID: 787261246307778306, guid: b07eef85cc64835449ceeac4fbeb1f4d, type: 3}
+  Undead:
+  - {fileID: 787261246307778306, guid: b07eef85cc64835449ceeac4fbeb1f4d, type: 3}
+  - {fileID: 8053155213461977191, guid: 757da6b820437af9c946c4b790d1dd3a, type: 3}
   distanceToSpawn: 3
   refreshTime: 12
   mySprite: {fileID: 8858521636554176995}
